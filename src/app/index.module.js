@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('shouldIgo', ['ngAnimate', 'ngMessages', 'ui.router', 'toastr']);
+    .module('shouldIgo', ['ngAnimate', 'ngMessages', 'ui.router']);
 
 })();
