@@ -7,19 +7,26 @@
 
 .event-search__input {
   width: 100%;
-  height: 50px;
-  background: blue;
+  height: 55px;
+  background: #42a0e9;
   border: none;
   text-align: center;
-  font-size: 30px;
-  color: white;
+  font-size: 26px;
+  color: #276595;
 }
 
 .event-search__results {
-  background: #000;
+  background: #0c0e12;
   width: 100%;
-  overflow-x: scroll;
+  overflow: hidden;
   height: 350px;
+}
+
+.event-search__results-slider {
+  position: absolute;
+  width: 2000px;
+  overflow-y: hidden;
+  left: -30%;
 }
 
 .event-search__month {
@@ -33,6 +40,9 @@
   top: 50%;
   left: -12px;
   transform: rotate(-90deg) translate(0, -100%);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 15px;
 
   &:after, &:before {
     content: "";
@@ -62,9 +72,14 @@
 .event-search__event__wrapper {
   width: 225px; height: 100px;
   background: red;
-  margin: 8px 4px;
+  margin: 12px 6px;
   text-align: center;
   position: relative;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+  }
 }
 
 .event-search__event__name {
@@ -74,5 +89,62 @@
   width: 200px; height: 45px;
   line-height: 45px;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(19, 37, 51, 0.7);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.event-info {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  right: 100px;
+  bottom: 60px;
+}
+
+.event-info__header {
+  height: 30%;
+  background-size: cover;
+}
+
+.event-info__name-container {
+  transform: translate(0, -30%);
+}
+
+.event-info__name {
+  padding: 30px 60px;
+  background: rgba(19, 37, 51, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.event-info__date {
+  margin: 0 auto;
+  font-size: 50px;
+  text-transform: uppercase;
+  transform: translate(0, -30%);
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    border-bottom: 1px solid white;
+    top: 50%;
+    width: 100px;
+  }
+
+  &:before {
+    right: 20%;
+    margin-right: 15px;
+  }
+
+  &:after {
+    left: 20%;
+    margin-left: 15px;
+  }
+}
+
+.event-info__content {
+  height: 70%;
+  background: rgba(66, 160, 233, 0.9);
 }
